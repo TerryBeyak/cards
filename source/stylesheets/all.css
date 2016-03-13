@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 63mm;
+  height: 88mm;
+  border: 1px solid white;
+  display: flex;
+
+}
+
+.card-content {
+  border: 1em solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-content.move {
+  border: 1em solid beige;
+}
+
+.card-content.terrain {
+  border: 1em solid blue;
+}
+
+p {
+  margin: 0;
+  padding: 1em;
+}
+
+img {
+  max-width: 50mm;
+  max-height: 40mm;
+}
+
+@media screen {
+  .card {
+  }
+}
+
+@media print {
+
+  * {
+    page-break-inside: avoid;
+  }
+
+  .card {
+    width: 60mm;
+    height: 84mm;
+    page-break-inside: avoid;
+  }
+}
